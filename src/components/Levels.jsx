@@ -29,12 +29,12 @@ const Levels = ({dead, setDead, level, setLevel, hearts, setHearts, lives, setLi
         e.preventDefault();
         console.log(input);
 
-        if(level+1 === maxLevel){
-            console.log('WIN!'); // ? Win Goes Here
-            return;
-        }
-
         if(input === questions[level].a){
+            if(level+1 === maxLevel){
+                console.log('WIN!'); // ? Win Goes Here
+                return;
+            }
+            
             setLevel(level + 1);
             setInput('');
         }
